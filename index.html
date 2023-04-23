@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" type="text/javascript" defer></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar start -->
+
+<section>
+  <div class="header">
+    <ul>
+      <li><span id="bg1">1</span><div><p>STEP 1</p><p>YOUR INFO</p></div></li>
+      <li><span id="bg2">2</span><div><p>STEP 2</p><p>SELECT PLAN</p></div></li>
+      <li><span id="bg3">3</span><div><p>STEP 3</p><p>ADD-ONS</p></div></li>
+      <li><span id="bg4">4</span><div><p>STEP 4</p><p>SUMMARY</p></div></li>
+    </ul>
+  </div>
+
+  <!-- Sidebar end -->
+
+  <div class="side-part">
+    <div class="container">
+      <!-- Step 1 start -->
+      <div class="step1">
+        <h1>Personal info</h1>
+        <p>Please provide your name, email address, and phone number.</p>
+    
+        <label for="Name">Name</label><br>
+        <input type="text" placeholder="e.g. Stephen King">
+        <br>
+        <label for="Email Address">Email Address</label><br>
+        <input type="email" placeholder="e.g. stephenking@lorem.com">
+        <br>
+        <label for="Phone Number">Phone Number</label><br>
+        <input type="text" placeholder="e.g. +1 234 567 890">
+        <br>
+      </div>
+      <!-- Step 1 end -->
+      
+      <!-- Step 2 start -->
+
+      <div class="step2 d-none">
+        <h1>Select your plan</h1>
+        <p>You have the option of monthly or yearly billing.</p>
+
+        <div class="monthly">
+          <label>
+            <input type="radio" name="period" class="option" value="Arcade(Monthly)" data-value="90">
+            <article class="plan">
+            <img src="./assets/images/icon-arcade.svg">
+            <div>
+              <h4>Arcade</h4>
+              <p>$9/mo</p>
+            </div>
+            </article>
+          </label>
+    
+          <label>
+          <input type="radio" name="period" class="option" value="Advanced(Monthly)" data-value="120">
+          <article class="plan">
+            <img src="./assets/images/icon-advanced.svg">
+            <div>
+              <h4>Advanced</h4>
+              <p>$12/mo</p>
+            </div>
+          </article>
+        </label>
+    
+          <label>
+            <input type="radio" name="period" class="option" value="Pro(Monthly)" data-value="150">
+            <article class="plan">
+              <img src="./assets/images/icon-pro.svg">
+              <div>
+                <h4>Pro</h4>
+                <p>$15/mo</p>
+              </div>
+            </article>
+          </label>
+        </div>
+
+        <div class="yearly">
+          <label>
+            <input type="radio" name="period" class="option" value="Arcade(Yearly)" data-value="90">
+            <article class="plan">
+            <img src="./assets/images/icon-arcade.svg">
+            <div>
+              <h4>Arcade</h4>
+              <p id="pad">$90/yr</p>
+              <p id="free">2 months free</p>
+            </div>
+            </article>
+          </label>
+    
+        <label>
+          <input type="radio" name="period" class="option" value="Advanced(Yearly)" data-value="120">
+          <article class="plan">
+            <img src="./assets/images/icon-advanced.svg">
+            <div>
+              <h4>Advanced</h4>
+              <p id="pad">$120/yr</p>
+              <p id="free">2 months free</p>
+            </div>
+          </article>
+        </label>
+    
+          <label>
+            <input type="radio" name="period" class="option" value="Pro(Yearly)" data-value="150">
+            <article class="plan">
+              <img src="./assets/images/icon-pro.svg">
+              <div>
+                <h4>Pro</h4>
+                <p id="pad">$150/yr</p>
+                <p id="free">2 months free</p>
+              </div>
+            </article>
+          </label>
+        </div>
+
+        <div class="toggle">
+          <h6>Monthly</h6>
+          <label class="switch">
+            <input type="checkbox" id="check" onclick="timeperiod()">
+            <span class="slider round"></span>
+          </label>
+          <h6>Yearly</h6>
+        </div>
+      </div>
+
+    <!-- Step 2 end -->
+
+    <!-- Step 3 start -->
+    
+      <div class="step3 d-none">
+        <h1>Pick add-ons</h1>
+        <p>Add-ons help enhance your gaming experience.</p>
+
+        <div class="monthlyc">
+          <label class="plan">
+            <input type="checkbox" class="option" id="chck" value="Online service" data-value="10">
+            <article>
+              <h4>Online service</h4>
+              <p>Access to multiplayer games</p>
+            </article>
+            <p id="charge">+$1/mo</p>
+          </label>
+        
+        <label class="plan">
+          <input type="checkbox"  class="option" id="chck" value="Larger storage" data-value="20">
+          <article>
+            <h4>Larger storage</h4>
+            <p>Extra 1TB of cloud save</p>
+          </article>
+          <p id="charge">+$2/mo</p>
+        </label>
+
+        <label class="plan">
+          <input type="checkbox"  class="option" id="chck" value="Customizable Profile" data-value="20">
+          <article>
+            <h4>Customizable Profile</h4>
+            <p>Custom theme on your profile</p>
+          </article>
+          <p id="charge">+$2/mo</p>
+        </label>
+        </div>
+
+        <div class="yearlyc">
+          <label class="plan">
+            <input type="checkbox" class="option" id="chck" value="Online service" data-value="10">
+            <article>
+              <h4>Online service</h4>
+              <p>Access to multiplayer games</p>
+            </article>
+            <p id="charge">+$10/yr</p>
+          </label>
+        
+        <label class="plan">
+          <input type="checkbox"  class="option" id="chck" value="Larger storage" data-value="20">
+          <article>
+            <h4>Larger storage</h4>
+            <p>Extra 1TB of cloud save</p>
+          </article>
+          <p id="charge">+$20/yr</p>
+        </label>
+    
+        <label class="plan">
+          <input type="checkbox"  class="option" id="chck" value="Customizable Profile" data-value="20">
+          <article>
+            <h4>Customizable Profile</h4>
+            <p>Custom theme on your profile</p>
+          </article>
+          <p id="charge">+$20/yr</p>
+        </label>
+        </div>
+      </div>
+    <!-- Step 3 end -->
+
+    <!-- Step 4 start -->
+
+      <div class="step4 d-none">
+        <h1>Finishing up</h1>
+        <p>Double-check everything looks OK before confirming.</p>
+      
+        <!-- Dynamically add subscription and add-on selections here -->
+
+        <div class="summary"></div>
+        <div class="total"></div>
+      </div>
+      <!-- Step 4 end -->
+      
+      <!-- Step 5 start -->
+      
+      <div class="step5 d-none">
+        <!-- <div> -->
+          <img src="./assets/images/icon-thank-you.svg">
+          <h1>Thank you!</h1>
+          <p>
+            Thanks for confirming your subscription! We hope you have fun 
+            using our platform. If you ever need support, please feel free 
+            to email us at support@loremgaming.com.
+          </p>
+        <!-- </div> -->
+      </div>
+    </div>
+      
+      <!-- Step 5 end -->
+      <div class="btn-wrapper">
+        <button class="back d-none" onclick="goBackButton()">Go Back</button>
+        <button class="next" onclick="nextButton()">Next Step</button>
+      </div>
+  </div>
+</section>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> 
+    Coded by <a href="#">Yash Bhanderi</a>
+  </div> -->
+
+</body>
+</html>

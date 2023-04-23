@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: ubuntu;
+    font-size: 16px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+body{height: 97vh;}
+
+body section {
+    overflow: hidden;
+    height: 95vh;
+}
+
+section{
+    display: flex;
+}
+
+.header{
+    position: relative;
+    background-image: url(./assets/images/bg-sidebar-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25%;
+}
+
+ul{
+    list-style: none;
+    line-height: 1.25rem;
+}
+
+li{
+    display: flex;
+    gap: 10%;
+    padding-bottom: 2rem;    
+}
+
+li p:first-child{
+    color: hsl(231, 11%, 63%);
+    font-size: 14px;
+}
+
+li p{
+    margin: 0;
+    color: hsl(0, 0%, 100%);
+}
+
+span{
+    height: 2.5rem;
+    width: 2.5rem;
+    border: solid hsl(0, 0%, 100%) 2px;
+    border-radius: 50%;
+    padding: 0.5rem 0.9rem;
+    color: hsl(0, 0%, 100%);
+}
+
+li div{
+    width: 10rem;
+}
+
+.next{
+    background-color: hsl(213, 96%, 18%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+}
+
+.back{
+    display: none;
+}
+
+.d-none{
+    display: none;
+}
+
+.side-part{
+    width: 100%;
+}
+
+.container{
+    display: block;
+    margin: 0 auto;
+    height: fit-content;
+    width: 61%;
+    height: 100%;
+}
+
+.step1 input{
+    border: solid hsl(229, 24%, 87%) 1.5px;
+    border-radius: 6px;
+    width: 100%;
+    height: 35px;
+    padding-left: 3%;
+    margin-bottom: 5%;
+}
+
+input:hover{
+    border-color: hsl(243, 100%, 62%);
+    cursor: pointer;
+}
+
+label:hover{cursor: pointer;}
+
+.step1 input:focus{
+    outline-color: hsl(243, 100%, 62%);
+}
+
+.step1 h1{
+    color: hsl(213, 96%, 18%);
+    font-size: 24px;
+}
+
+.step1 p{
+    color: hsl(231, 11%, 63%);
+    padding-bottom: 7.5%;
+}
+
+.step1 label{
+    color: hsl(213, 96%, 18%);
+}
+
+.step2 h1{
+    color: hsl(213, 96%, 18%);
+    font-size: 24px;
+}
+
+.step2 p{
+    color: hsl(231, 11%, 63%);
+    padding-bottom: 7.5%;
+}
+
+.monthly , .yearly{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10%;
+}
+
+.step2 article{
+    border: solid hsl(229, 24%, 87%) 1.5px;
+    border-radius: 10px;
+}
+
+.step2 h4{
+    color: hsl(213, 96%, 18%);
+    margin: 60px 0px 0px 0px;
+    padding-left: 15px;
+}
+
+.step2 img{
+    padding: 15px 0px 0px 15px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(213, 96%, 18%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 1px;
+    bottom: 1px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(15px);
+}
+
+.slider.round {
+    border-radius: 50px;
+    width: 35px;
+    height: auto;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.step2 article p{
+    position: relative;
+    margin-top: 0%;
+    margin-bottom: 0;
+    padding-left: 15px;
+}
+
+.toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.toggle h6{
+    padding: 0px 20px;
+}
+
+.monthly input, .yearly input {
+    display: none;
+}
+
+input[type="radio"]:checked + .plan{
+    background-color: hsl(231, 100%, 99%);
+    border-color: hsl(243, 100%, 62%);
+}
+
+#free{
+    font-size: 14px;
+    color: hsl(213, 96%, 18%);
+}
+
+#pad{
+    padding: 2px 0 2px 15px;
+}
+
+.yearly{
+    display: none;
+}
+
+.step3 h1{
+    color: hsl(213, 96%, 18%);
+    font-size: 24px;
+}
+
+.step3 p{
+    color: hsl(231, 11%, 63%);
+}
+
+.step3 label{
+    border: solid hsl(229, 24%, 87%) 1.5px;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 7.5%;
+}
+
+.step3 input{
+    margin: auto 25px;
+    width: 15px;
+    height: 15px;
+}
+
+.step3 h4{
+    margin: 0;
+    color: hsl(213, 96%, 18%);
+}
+
+.step3 article p{
+    margin: 0;
+}
+
+.step3 article{
+    margin: auto 0;
+    vertical-align: center;
+    padding: 5%;
+}
+
+.yearlyc{
+    display: none;
+}
+
+#charge{
+    color: hsl(243, 100%, 62%);
+    padding-bottom: 0;
+    margin: auto;
+    margin-right: 2%;
+}
+
+.plan:has(input:checked) {
+    background-color: hsl(231, 100%, 99%);
+    border-color: hsl(243, 100%, 62%);
+}
+
+.step4 h1{
+    color: hsl(213, 96%, 18%);
+    font-size: 24px;
+}
+
+.step4 p{
+    color: hsl(231, 11%, 63%);
+    padding-bottom: 7.5%;
+}
+
+.summary{
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.name{
+    margin: 0;
+}
+
+.summary div:first-child p{
+    color: hsl(213, 96%, 18%);
+    font-weight: bold;
+    margin: 0;
+}
+
+.btn-wrapper{
+    width: 61%;
+    height: fit-content;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    bottom: 7.5%;
+}
+
+.next{
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+}
+
+.back{
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: hsl(231, 11%, 63%);
+}
+
+.summary div:first-child{
+    border-bottom: 2px solid hsl(231, 11%, 63%);
+    margin-bottom: 1.5rem;
+}
+
+#cost{
+    color: hsl(213, 96%, 18%);
+    margin: 0;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+#total{
+    color: hsl(243, 100%, 62%);
+}
+
+.step5{
+    display: none;
+    vertical-align: center;
+    padding: 25%;
+    text-align: center;
+}
+
+.step5 h1{
+    color: hsl(213, 96%, 18%) ;
+    font-size: x-large;
+}
+
+@media screen and (max-width: 426px) {
+    body{
+        margin: 0;
+    }
+    
+    section{
+        display: block;
+        background-color: hsl(229, 24%, 87%);
+    }
+
+    .header{
+        background-image: url(./assets/images/bg-sidebar-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 30%;
+    }
+    
+    ul{
+        display: flex;
+        gap: 0.5rem;
+        vertical-align: middle;
+        padding: 5vh 13vh;
+        margin: 0;
+        width: fit-content;
+    }
+    
+    li div{
+        display: none;
+    }
+
+    .side-part{
+        height: 100%;
+    }
+
+    .container{
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 10px;
+        width: 90%;
+        height: fit-content;
+        transform: translateY(-15vh);
+        padding: 5%;
+    }
+
+    .monthly , .yearly{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5%;
+    }
+
+    .yearly{
+        display: none;
+    }
+
+    .plan{
+        display: flex;
+    }
+
+    .plan h4{
+        margin: 0;
+    }
+
+    .plan img{
+        vertical-align: middle;
+        padding: 5%;
+    }
+
+    .plan div{
+        vertical-align: middle;
+        padding: 5%;
+    }
+
+    .plan article{
+        vertical-align: middle;
+        padding: 2%;
+    }
+
+    .step3 input{
+        margin: auto 2%;
+    }
+
+    .step3 label{
+        margin: 2% 0;
+    }
+
+    .step5{
+        padding: 5%;
+    }
+
+    .btn-wrapper{
+        background-color: white;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        height: 7.5%;
+        vertical-align: middle;
+        padding: 5%;
+    }
+}
